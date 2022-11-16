@@ -59,17 +59,6 @@ int Compare(char* outputfile_path1, char* outputfile_path2)
     }   
     return 1;
 }
-char* strmcpy(const char* t, int m)
-{
-    char s[100] = {0};
-    int n = strlen(t);
-    for(int i = 0;i<=n-m+1;i++)
-    {
-        if(t[m+1-i] == '\0') s[i] = '\0';
-        s[i] = t[m+i-1];
-    }
-    return s;
-}
 
 void strmcpy(char *s, int m ,int n ,char *t)
 {

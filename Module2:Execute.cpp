@@ -17,9 +17,7 @@
 using namespace std;
 
 #include "Module.h"
-
-//----------------------------------
-
+//-------------------------------------------Module2:执行OJ程序-----------------------------------------------
 int ExecuteFiles(const std::string& directory) 
 {
     DIR* dir = opendir(directory.c_str()); 
@@ -33,7 +31,7 @@ int ExecuteFiles(const std::string& directory)
     char dot[3] = ".";               
     char dotdot[6] = "..";
 
-    //-----------------------------------分别遍历input目录下的dir文件夹-----------------------------------
+    //--------------------------------分别遍历input目录下的dir1,dir2...文件夹-----------------------------------
     while ( (d_ent = readdir(dir)) != NULL )   
     {
         if ( (strcmp(d_ent->d_name, dot) != 0)
