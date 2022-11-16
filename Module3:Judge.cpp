@@ -93,11 +93,24 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
     printf("%s\n", path1_relative);
     printf("%s\n", path2_relative);
 
+    char path_file[100] = {0};
+    int m = 0;
+    for(int j = strlen(file1_path)-1;;j--)
+        if (file1_path[j] == '/'){
+            m = j;break;
+        }
+                
+    strncpy(path_file, file1_path, m);
+
+    std::string csvpath1 = std::string(path_file) + std::string("/equal.csv");
+    std::string csvpath2 = std::string(path_file) + std::string("/inequal.csv");
+
+
     if(result == 1)
     {
         FILE *fp;
         fp = 0;
-        if((fp = fopen("./equal.csv","a"))==0)
+        if((fp = fopen("./output/equal.csv","a"))==0)
         {
             printf("Fail to open the file!\n");
             //return -1;
@@ -109,7 +122,7 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
     {
         FILE *fp;
         fp = 0;
-        if((fp = fopen("./inequal.csv","a"))==0)
+        if((fp = fopen("./output/inequal.csv","a"))==0)
         {
             printf("Fail to open the file!\n");
             //return -1;

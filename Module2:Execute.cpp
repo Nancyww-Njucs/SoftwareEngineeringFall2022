@@ -36,7 +36,7 @@ int ExecuteFiles(const std::string& directory)
         if ( (strcmp(d_ent->d_name, dot) != 0)
               && (strcmp(d_ent->d_name, dotdot) != 0) )  
         {
-            if ( d_ent->d_type == DT_DIR ) 
+            if ( d_ent->d_type == DT_DIR && strcmp(d_ent->d_name, "output") != 0 ) 
             {
                 std::vector<std::string> vstrFile;
                 
@@ -120,14 +120,9 @@ int ExecuteFiles(const std::string& directory)
 
 int main()
 {
-    //std::vector<std::string> vstrFile;
+    system("mkdir output");
+    system("touch ./output/equal.csv");
+    system("touch ./output/inequal.csv");
 	ExecuteFiles("./input");
-    /*
-    for (size_t i = 0; i < vstrFile.size(); i++)
-    {
-        std::cout<<vstrFile[i].c_str()<<std::endl;
-    }
-    
-    */
 	return 0;
 }
