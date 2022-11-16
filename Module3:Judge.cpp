@@ -45,7 +45,6 @@ int Compare(char* outputfile_path1, char* outputfile_path2)
 
     if(vstrFile1.size() != vstrFile2.size())
     {
-        //printf("0");
         return 0;
     }
     else
@@ -100,7 +99,7 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
         fp = 0;
         if((fp = fopen("./equal.csv","a"))==0)
         {
-            printf("文件打开失败!\n");
+            printf("Fail to open the file!\n");
             //return -1;
         }
         fprintf(fp, "%s %s\n", path1_relative, path2_relative);
@@ -112,7 +111,7 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
         fp = 0;
         if((fp = fopen("./inequal.csv","a"))==0)
         {
-            printf("文件打开失败!\n");
+            printf("Fail to open the file!\n");
             //return -1;
         }
         fprintf(fp, "%s %s\n", path1_relative, path2_relative);
