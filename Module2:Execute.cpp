@@ -60,9 +60,6 @@ int ExecuteFiles(const std::string& directory)
                         //(i,j)compare
                         std::string file1 = vstrFile[i];
                         std::string file2 = vstrFile[j];
-                        
-                        //printf("%s\n",file1.c_str());
-                        //printf("%s\n",file2.c_str());
 
                         std::string createout1_cmd = std::string("g++ ") + file1 + std::string(" -o ") 
                             + std::string("outputfile1.out");
