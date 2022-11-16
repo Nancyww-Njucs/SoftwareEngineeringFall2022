@@ -75,14 +75,6 @@ void HandleChar(char* arr, int begin, int end)
         printf("文件打开失败!\n");
         //return -1;
     }
-    /*
-    char *strBuf=(char*)malloc(size);
-    strcpy(strBuf,"武汉加油，中国加油");
-    fprintf(fp,"%s",strBuf);
-    fclose(fp);
-    delete(strBuf);
-    strBuf=0;
-    */
 
     if(arr[begin] == 'i')
     {
