@@ -131,8 +131,6 @@ void showAllFiles(const char *dir_name, std::vector<std::string>& filesAbsoluteP
         strncpy(name, filename->d_name, strlen(filename->d_name)-4);
         if(strcmp(name, "stdin_format") != 0 && strcmp(name, "input") != 0)
 		{
-            //cout<<"FileName:"<<name << endl;
-            //cout<<"FilePath:"<<dir_name<<"/"<<filename->d_name << endl;
             std::string absolutePath = dir_name + std::string("/") + filename->d_name;
             filesAbsolutePath.push_back(absolutePath);
         }
