@@ -100,7 +100,7 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
             printf("Fail to open the file!\n");
             //return -1;
         }
-        fprintf(fp, "%s %s\n", path1_relative, path2_relative);
+        fprintf(fp, "%s,%s\n", path1_relative, path2_relative);
         fclose(fp);
     }
     else if(result == 0)
@@ -112,7 +112,7 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
             printf("Fail to open the file!\n");
             //return -1;
         }
-        fprintf(fp, "%s %s\n", path1_relative, path2_relative);
+        fprintf(fp, "%s,%s\n", path1_relative, path2_relative);
         fclose(fp);
     }
 }
