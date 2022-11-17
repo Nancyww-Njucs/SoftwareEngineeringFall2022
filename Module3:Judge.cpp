@@ -77,8 +77,8 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
 {
     char path1_relative[100] = {0};
     char path2_relative[100] = {0};
-    strmcpy((char*)file1_path, 8 ,strlen(file1_path)-1, path1_relative);
-    strmcpy((char*)file2_path, 8 ,strlen(file2_path)-1, path2_relative);
+    strmcpy((char*)file1_path, 2 ,strlen(file1_path)-1, path1_relative);
+    strmcpy((char*)file2_path, 2 ,strlen(file2_path)-1, path2_relative);
     printf("%s\n", path1_relative);
     printf("%s\n", path2_relative);
 
@@ -90,10 +90,6 @@ void SetResult(const char* file1_path, const char* file2_path, int result)
         }
                 
     strncpy(path_file, file1_path, m);
-
-    std::string csvpath1 = std::string(path_file) + std::string("/equal.csv");
-    std::string csvpath2 = std::string(path_file) + std::string("/inequal.csv");
-
 
     if(result == 1)
     {
